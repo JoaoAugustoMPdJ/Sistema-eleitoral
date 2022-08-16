@@ -1,0 +1,6 @@
+2022-08-16 10:31:13 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "USER" not found; SQL statement:
+SELECT ID FROM USER WHERE ID <> ID [42102-200]
+2022-08-16 10:31:13 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "SEQUENCE" not found; SQL statement:
+SELECT SEQ_NAME FROM SEQUENCE WHERE SEQ_NAME <> SEQ_NAME [42102-200]
