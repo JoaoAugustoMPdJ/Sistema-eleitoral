@@ -155,6 +155,7 @@ public static void main (String [] Args){
 int votoUm=0;
 int votoDois=0;
 int votoNulo=0;
+int id;
 String candidatoUm;
 String candidatoDois;
 int Nulo;
@@ -169,6 +170,12 @@ int contaN;
     
     do
     {
+        id= Integer.parseInt(JOptionPane.showInputDialog("Informe o numero de identificação do usuario"));
+        while(id == id || id==0){ 
+            System.out.println("USUARIO JÁ REALIZOU O VOTO");
+        }
+       
+        
     voto = Integer.parseInt(JOptionPane.showInputDialog("ESCOLHA UMA OPÇÃO DE VOTO: \n [1] " + candidatoUm + "\n [2] " + candidatoDois + "\n [0] Nulo/Branco")); 
     
     
@@ -259,7 +266,10 @@ int contaN;
     }else{
         continue;
     }
-    } while (voto != 999);
+    }
+   
+    }
+        while (voto != 999);
     if (votoUm > votoDois)
        {
            System.out.println("O VENCEDOR DA ELEIÇÃO FOI: " + candidatoUm + " COM: " + votoUm + " VOTOS");
@@ -276,7 +286,8 @@ int contaN;
        
        System.out.println("A QUANTIDADE DE VOTOS NULOS/EM BRANCO FOI DE: " + votoNulo);
        System.exit(1);
-       
+    
+        
    
 }
 
