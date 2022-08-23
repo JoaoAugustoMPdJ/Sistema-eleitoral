@@ -165,16 +165,22 @@ final int contaV1;
 int contaV2;
 int contaN;
  pergunta = 'S';
+    // O ADM sempre será o usuario 0 e somente ele poderá cadastrar candidatos
+    id= Integer.parseInt(JOptionPane.showInputDialog("Informe o numero de identificação do usuario"));
+    if(id == 0){
     candidatoUm = JOptionPane.showInputDialog("QUAL SERÁ O CANDIDATO UM?");
     candidatoDois = JOptionPane.showInputDialog("QUAL SERÁ O CANDIDATO DOIS?");
-    
+    }else{
     do
     {
-        id= Integer.parseInt(JOptionPane.showInputDialog("Informe o numero de identificação do usuario"));
-        while(id == id || id==0){ 
+        int id2;
+        id2=0;
+        id=aux;
+        
+        while(id == id2){ 
             System.out.println("USUARIO JÁ REALIZOU O VOTO");
         }
-       
+       aux=id2;
         
     voto = Integer.parseInt(JOptionPane.showInputDialog("ESCOLHA UMA OPÇÃO DE VOTO: \n [1] " + candidatoUm + "\n [2] " + candidatoDois + "\n [0] Nulo/Branco")); 
     
@@ -290,7 +296,7 @@ int contaN;
         
    
 }
-
+}
 
 
 @Override
